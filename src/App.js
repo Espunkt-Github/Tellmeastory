@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './components/Login';
 import Register from './components/Register';
-import Login from './components/Login';
 import Questions from './pages/Questions';
 import Answers from './pages/Answers';
 import axios from 'axios';
