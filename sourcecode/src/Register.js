@@ -7,15 +7,23 @@ import { useNavigate } from 'react-router-dom';
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useNavigate();
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    setError('');
+    setSuccess('');
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      history.push('/internal');
+      setSuccess('Registrierung erfolgreich!');
+      setTimeout(() => {
+        navigate('/login');
+      }, 10000);
+      navigate('/login');
     } catch (error) {
-      console.error(error.message);
+      setError(error.message);
     }
   };
 
@@ -39,6 +47,8 @@ const Register = () => {
         />
         <button type="submit">Registrieren</button>
       </form>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {success && <p style={{ color: 'green' }}>{success}</p>}
     </div>
   );
 };
