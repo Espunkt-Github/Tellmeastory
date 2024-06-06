@@ -4,6 +4,7 @@ import './App.css';
 import Register from './Register';
 import Internal from './internal';
 import Login from './login';
+import './App.css';
  
 function App() {
   return (
@@ -23,10 +24,12 @@ function App() {
     </Router>);
 }
 const LandingPage = () => (
-  <div>
+  <div className="centered-container">
+  <div className="form-container">
     <h2>Willkommen auf der Landingpage</h2>
     <Login />
     <p>Noch kein Konto? <a href="/register">Registrieren</a></p>
+  </div>
   </div>
 );
 export default App;

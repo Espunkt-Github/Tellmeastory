@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from './firebaseConfig';
 import { useNavigate } from 'react-router-dom';
+import './App.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -20,7 +21,8 @@ const Login = () => {
   };
 
   return (
-    <div style={{ margin: '20px', padding: '20px', border: '1px solid #ccc' }}>
+    <div className="centered-container">
+      <div className="form-container">
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input 
@@ -39,6 +41,7 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
+    </div>
     </div>
   );
 };
