@@ -11,7 +11,6 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>Der Titel</h1>
           <p>Mein Versuch, eine Website zu bauen.</p>
         </header>
         <Routes>
@@ -26,7 +25,7 @@ function App() {
 const LandingPage = () => (
   <div className="centered-container">
   <div className="form-container">
-    <h2>Willkommen auf der Landingpage</h2>
+    <h3>Willkommen auf der Landingpage</h3>
     <Login />
     <p>Noch kein Konto? <a href="/register">Registrieren</a></p>
   </div>

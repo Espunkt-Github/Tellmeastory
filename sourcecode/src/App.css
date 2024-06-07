@@ -14,14 +14,23 @@
 }
 
 .App-header {
+  width: 100%;
+  height: 25vh; /* Höhe des Headers auf 25% der Page */
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header h1 {
+  font-size: 1.5rem; /* Schriftgröße im Header */
+  margin: 0; /* Kein Margin */
+}
+
+.App-header p {
+  font-size: 1rem; /* Kleinere Schriftgröße */
+  margin: 0; /* Kein Margin */
 }
 
 .App-link {
@@ -51,13 +60,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Vollbildhöhe */
+  height: calc(100vh - 360px); /* Vollbildhöhe minus Header-Höhe */
+  padding: 20px; /* Optionaler zusätzlicher Abstand */
 }
 
 .form-container {
+  padding: 30px; /* Abstand um die Features herum */
   border: 1px solid #ccc;
-  padding: 20px;
   border-radius: 5px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container h1 {
+  margin-bottom: 10px; /* Reduzierter Abstand */
+}
+
+.form-container h2 {
+  margin-bottom: 10px; /* Reduzierter Abstand */
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container form input,
+.form-container form button {
+  margin-bottom: 5px; /* Reduzierter Abstand */
+}
+
+.form-container p {
+  margin-top: 10px; /* Reduzierter Abstand */
 }
