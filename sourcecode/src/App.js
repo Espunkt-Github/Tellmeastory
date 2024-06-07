@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/internal" element={<Internal />} />
+          <Route path="/internal/*" element={<Internal />} />
         </Routes>
       </div>
     </Router>);
