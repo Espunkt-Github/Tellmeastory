@@ -4,6 +4,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import UserManagement from './userManagement';
 import './App.css';
 import Questions from './Questions';
+import Logout from './Logout';
 
 const Internal = () => {
   return (

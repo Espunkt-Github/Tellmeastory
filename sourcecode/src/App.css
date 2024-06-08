@@ -64,6 +64,46 @@
   padding: 20px; /* Optionaler zusätzlicher Abstand */
 }
 
+/* src/App.css */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.dashboard {
+  width: 300px; /* Sie können diese Breite anpassen */
+  background-color: #f4f4f4; /* Hintergrundfarbe des Dashboards */
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+
+nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #ac5e5e;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #6200ee;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav {
+  flex: 1;
+  text-align: right;
+}
+
+
 .form-container {
   padding: 30px; /* Abstand um die Features herum */
   border: 1px solid #ccc;
@@ -114,4 +154,37 @@
 
 .internal-container nav ul li {
   display: inline;
+}
+
+.logout-button {
+  position: relative;
+  top: 100px;
+  right: 100px;
+  padding: 100px 200px;
+  background-color: #f44336;
+  color: rgb(109, 53, 53);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+
+.user-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.user-info p {
+  margin: 0 10px;
+}
+
+.user-info button {
+  margin: 0 5px;
 }
