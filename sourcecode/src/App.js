@@ -7,7 +7,6 @@ import Login from './login';
 import Register from './Register';
 import UserInfo from './UserInfo';
 import './App.css';
-
 import Dashboard from './Dashboard';
 
 
@@ -23,7 +22,7 @@ function App() {
             <Link to="/">Home</Link>
             {!user && <Link to="/register">Registrieren</Link>}
             {!user && <Link to="/login">Login</Link>}
-            {user && <Link to="/dashboard">Dashboard</Link>}
+            {!user && <Link to="/dashboard">Dashboard</Link>}
           </nav>
         </header>
         <Routes>
